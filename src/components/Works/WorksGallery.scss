@@ -1,0 +1,32 @@
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); // 2 columns for narrow images
+  grid-gap: 10px;
+  padding: 8%;
+}
+
+.gallery-item {
+  &.wide {
+    grid-column: span 2; // Make the full-width images span across 2 columns
+  }
+
+  &.narrow {
+    grid-column: span 1; // Half-width images take 1 column
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+.load-more {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #ffc107;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
